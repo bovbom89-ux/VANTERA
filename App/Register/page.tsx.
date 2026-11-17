@@ -1,0 +1,48 @@
+
+export default function RegisterPage() {
+  return (
+    <main className="auth-page">
+      <div className="auth-card">
+        <a href="/" className="brand">VANTERA</a>
+
+        <h1>Create your account</h1>
+        <p>Get started with your own VANTERA workspace.</p>
+
+        <form>
+          <label htmlFor="name">Full name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Your name"
+            required
+          />
+
+          <label htmlFor="email">Email address</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Create a password"
+            minLength={8}
+            required
+          />
+
+          <button type="submit">Create account</button>
+        </form>
+
+        <div className="auth-links">
+          Already have an account? <a href="/login">Sign in</a>
+        </div>
+
+        <a href="/" className="back-link">Back to VANTERA</a>
+      </div>
+    </main>
+  );
+}
